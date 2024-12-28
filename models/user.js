@@ -1,6 +1,7 @@
-const { schema, model, Types } = require("mongoose");
+const { Schema, model, Types } = require("mongoose");
+const { createHmac, randomBytes } = require("crypto");
 
-const userSchema = new schema(
+const userSchema = new Schema(
     {
         fullName: {
             type: String,
